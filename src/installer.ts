@@ -49,6 +49,7 @@ export async function getGo(version: string) {
   // prepend the tools path. instructs the agent to prepend for future tasks
   //
   core.addPath(toolPath);
+  core.addPath("/home/runner/go/bin");
 }
 
 async function acquireGo(version: string): Promise<string> {
